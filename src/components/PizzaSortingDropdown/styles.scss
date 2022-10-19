@@ -1,0 +1,35 @@
+.dropdown {
+  margin-block-end: 20px;
+
+  h3 {
+    margin-block-end: 16px;
+  }
+
+  .preference {
+    display: flex;
+    align-items: center;
+
+    select {
+      width: 300px;
+      height: 40px;
+      padding: 4px;
+      margin-inline-end: 16px;
+
+      font-size: 18px;
+      text-transform: capitalize;
+    }
+
+    .btn {
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .swap {
+      background-image: url(../../images/swap.png);
+      width: 30px;
+      height: 30px;
+      background-size: cover;
+    }
+  }
+}

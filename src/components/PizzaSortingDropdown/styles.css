@@ -1,0 +1,32 @@
+.dropdown {
+  -webkit-margin-after: 20px;
+          margin-block-end: 20px;
+}
+.dropdown h3 {
+  -webkit-margin-after: 16px;
+          margin-block-end: 16px;
+}
+.dropdown .preference {
+  display: flex;
+  align-items: center;
+}
+.dropdown .preference select {
+  width: 300px;
+  height: 40px;
+  padding: 4px;
+  -webkit-margin-end: 16px;
+          margin-inline-end: 16px;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.dropdown .preference .btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.dropdown .preference .swap {
+  background-image: url(../../images/swap.png);
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+}/*# sourceMappingURL=styles.css.map */

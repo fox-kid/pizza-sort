@@ -1,0 +1,20 @@
+.wrapper .list_item {
+  list-style-type: none;
+  -webkit-margin-after: 20px;
+          margin-block-end: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .list_item h4 {
+  font-size: 18px;
+  -webkit-margin-after: 8px;
+          margin-block-end: 8px;
+}
+.wrapper .list_item p {
+  -webkit-margin-after: 4px;
+          margin-block-end: 4px;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "name": "Margherita",
+      "price": 18,
+      "size": "M",
+      "delivery_time": 40,
+      "ingredients": [
+        "pizza dough",
+        "tomato sauce",
+        "mozzarella",
+        "basil",
+        "tomato"
+      ]
+    },
+    {
+      "name": "Prosciutto",
+      "price": 28,
+      "size": "S",
+      "delivery_time": 50,
+      "ingredients": [
+        "pizza dough",
+        "tomato sauce",
+        "mozzarella",
+        "prosciutto",
+        "mushrooms",
+        "oregano"
+      ]
+    },
+    {
+      "name": "Calzone",
+      "price": 26,
+      "size": "S",
+      "delivery_time": 60,
+      "ingredients": [
+        "pizza dough",
+        "tomato sauce",
+        "salami",
+        "ricotta",
+        "mozzarella",
+        "parmesan",
+        "lard",
+        "pork rinds"
+      ]
+    },
+    {
+      "name": "Hawaiian",
+      "price": 30,
+      "size": "M",
+      "delivery_time": 65,
+      "ingredients": [
+        "pizza dough",
+        "tomato sauce",
+        "pineapple",
+        "mozzarella",
+        "boiled ham"
+      ]
+    },
+    {
+      "name": "Pepperoni",
+      "price": 24,
+      "size": "L",
+      "delivery_time": 45,
+      "ingredients": [
+        "pizza dough",
+        "tomato sauce",
+        "pepperoni",
+        "mozzarella"
+      ]
+    }
+  ]
+}
