@@ -24,8 +24,6 @@ export type CtxValues = {
   setSortBy: (sortBy: SortByType) => void
   swap: boolean
   setSwap: (swap: boolean) => void
-  pizza: Pizza | undefined
-  setPizza: (pizza: Pizza) => void
   sortedList: Pizza[]
   setSortedList: (sortedList: Pizza[]) => void
 }
@@ -36,8 +34,6 @@ const PizzaContext = createContext<CtxValues>({
   setSortBy: () => {},
   swap: false,
   setSwap: () => {},
-  pizza: undefined,
-  setPizza: () => {},
   sortedList: [],
   setSortedList: () => {},
 })
@@ -47,14 +43,6 @@ const PizzaContextProvider = ({ children }: { children: ReactNode }) => {
   const [sortBy, setSortBy] = useState<SortByType>('name')
   const [sortedList, setSortedList] = useState<Pizza[]>([])
   const [swap, setSwap] = useState<boolean>(false)
-  const [pizza, setPizza] = useState<Pizza>()
-
-//   useEffect(() => {
-//     const sorted = swap
-//       ? pizzaList.sort((a: any, b: any) => (a[sortBy] < b[sortBy] ? 1 : -1))
-//       : pizzaList.sort((a: any, b: any) => (a[sortBy] > b[sortBy] ? 1 : -1))
-//     setSortedList(sorted)
-//   }, [sortBy, swap])
 
   return (
     <PizzaContext.Provider
@@ -64,8 +52,6 @@ const PizzaContextProvider = ({ children }: { children: ReactNode }) => {
         setSortBy: setSortBy,
         swap: swap,
         setSwap: setSwap,
-        pizza: pizza,
-        setPizza: setPizza,
         sortedList: sortedList,
         setSortedList: setSortedList,
       }}
