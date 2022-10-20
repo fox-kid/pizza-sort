@@ -1,9 +1,9 @@
-import { usePizzaContext } from '../../context/PizzaContext';
+import { usePizzaContext } from '../../context/PizzaContext'
 
 const PizzaIngredients = () => {
-  const { pizzaList } = usePizzaContext();
+  const { pizzaList } = usePizzaContext()
 
-  return <div>ingredients</div>;
-};
+  return <div>ingredients</div>
+}
 
-export default PizzaIngredients;
+export default PizzaIngredients

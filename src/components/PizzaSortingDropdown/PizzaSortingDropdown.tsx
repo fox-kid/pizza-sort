@@ -1,31 +1,28 @@
-import { usePizzaContext } from '../../context/PizzaContext';
+import { usePizzaContext } from '../../context/PizzaContext'
 
-import './styles.css';
+import './styles.css'
 
 const PizzaSortingDropdown = () => {
-  const { sorterArr, setSortBy, swap, setSwap } = usePizzaContext();
+  const { setSortBy, swap, setSwap } = usePizzaContext()
 
   const handleSelect = (e: any) => {
-    setSortBy(e.target.value);
-  };
+    setSortBy(e.target.value)
+  }
 
   return (
-    <div className="dropdown">
+    <div className='dropdown'>
       <h3>Select Pizza Sorting Method</h3>
-      <div className="preference">
+      <div className='preference'>
         <select onChange={(e) => handleSelect(e)}>
-          {sorterArr.map((opt) => {
-            return (
-              <option value={opt} key={opt}>
-                {opt.includes('_') ? opt.replace('_', ' ') : opt}
-              </option>
-            );
-          })}
+          <option value='name'>Name</option>
+          <option value='price'>Price</option>
+          <option value='size'>Size</option>
+          <option value='delivery_time'>Delivery time</option>
         </select>
-        <button className="btn swap" onClick={() => setSwap(!swap)} />
+        <button className='btn swap' onClick={() => setSwap(!swap)} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PizzaSortingDropdown;
+export default PizzaSortingDropdown
