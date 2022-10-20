@@ -30,6 +30,15 @@
       width: 30px;
       height: 30px;
       background-size: cover;
+      position: relative;
+    }
+
+    .swap.reversed::after {
+      position: absolute;
+      content: '(reversed)';
+      left: 40px;
+      color: #8b8982;
+      font-size: 14px;
     }
   }
 }

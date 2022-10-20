@@ -29,4 +29,12 @@
   width: 30px;
   height: 30px;
   background-size: cover;
+  position: relative;
+}
+.dropdown .preference .swap.reversed::after {
+  position: absolute;
+  content: "(reversed)";
+  left: 40px;
+  color: #8b8982;
+  font-size: 14px;
 }/*# sourceMappingURL=styles.css.map */

@@ -20,7 +20,7 @@ const PizzaSortingDropdown = () => {
           <option value='size'>Size</option>
           <option value='delivery_time'>Delivery time</option>
         </select>
-        <button className='btn swap' onClick={() => setSwap(!swap)} />
+        <button className={`${swap ? 'btn swap reversed' : 'btn swap'} `} onClick={() => setSwap(!swap)} />
       </div>
     </div>
   )

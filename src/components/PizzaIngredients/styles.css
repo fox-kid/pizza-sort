@@ -1,1 +1,27 @@
-/*# sourceMappingURL=styles.css.map */
+.ingredients__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+}
+.ingredients__wrapper h4 {
+  -webkit-margin-after: 16px;
+          margin-block-end: 16px;
+}
+.ingredients__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.ingredients__img {
+  width: 200px;
+  height: 160px;
+}
+.ingredients__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=styles.css.map */

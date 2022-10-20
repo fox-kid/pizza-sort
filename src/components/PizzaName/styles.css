@@ -1,3 +1,7 @@
+.wrapper {
+  -webkit-margin-after: 30px;
+          margin-block-end: 30px;
+}
 .wrapper .list_item {
   list-style-type: none;
   -webkit-margin-after: 20px;

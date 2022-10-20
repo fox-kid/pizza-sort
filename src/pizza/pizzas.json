@@ -6,8 +6,8 @@
       "size": "M",
       "delivery_time": 40,
       "ingredients": [
-        "pizza dough",
-        "tomato sauce",
+        "pizza_dough",
+        "tomato_sauce",
         "mozzarella",
         "basil",
         "tomato"
@@ -19,8 +19,8 @@
       "size": "S",
       "delivery_time": 50,
       "ingredients": [
-        "pizza dough",
-        "tomato sauce",
+        "pizza_dough",
+        "tomato_sauce",
         "mozzarella",
         "prosciutto",
         "mushrooms",
@@ -33,8 +33,8 @@
       "size": "S",
       "delivery_time": 60,
       "ingredients": [
-        "pizza dough",
-        "tomato sauce",
+        "pizza_dough",
+        "tomato_sauce",
         "salami",
         "ricotta",
         "mozzarella",
@@ -48,11 +48,11 @@
       "size": "M",
       "delivery_time": 65,
       "ingredients": [
-        "pizza dough",
-        "tomato sauce",
+        "pizza_dough",
+        "tomato_sauce",
         "pineapple",
         "mozzarella",
-        "boiled ham"
+        "boiled_ham"
       ]
     },
     {
@@ -61,8 +61,8 @@
       "size": "L",
       "delivery_time": 45,
       "ingredients": [
-        "pizza dough",
-        "tomato sauce",
+        "pizza_dough",
+        "tomato_sauce",
         "pepperoni",
         "mozzarella"
       ]
