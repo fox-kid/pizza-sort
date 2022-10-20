@@ -1,22 +1,21 @@
-import { usePizzaContext } from '../../context/PizzaContext'
+import { Pizza, usePizzaContext } from '../../context/PizzaContext'
 
 import './styles.css'
 
 const PizzaName = () => {
-  const { sortedList } = usePizzaContext()
+  const { sortedList, sortBy, pizzaList, setSortedList, swap } = usePizzaContext()
+
+  const sorted = swap
+    ? pizzaList.sort((a: any, b: any) => (a[sortBy] < b[sortBy] ? 1 : -1))
+    : pizzaList.sort((a: any, b: any) => (a[sortBy] > b[sortBy] ? 1 : -1))
+
+  sortBy == 'size' ? setSortedList(sorted.reverse()) : setSortedList(sorted)
+  setSortedList(sorted)
 
   return (
-    <div className="wrapper">
+    <div className='wrapper'>
       <div>
-        <h3>Your pizza is: {sortedList ? sortedList[0].name : null}</h3>
-        {/* {list?.map((pizza) => (
-          <li key={pizza.name} className="list_item">
-            <h4>{pizza.name}</h4>
-            <p>Price: {pizza.price}</p>
-            <p>Size: {pizza.size}</p>
-            <p>Delivery time: {pizza.delivery_time}</p>
-          </li>
-        ))} */}
+        <h3>Your pizza is: {sortedList ? sortedList[0]?.name : null}</h3>
       </div>
     </div>
   )

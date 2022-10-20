@@ -5,7 +5,8 @@ import './styles.css'
 const PizzaSortingDropdown = () => {
   const { setSortBy, swap, setSwap } = usePizzaContext()
 
-  const handleSelect = (e: any) => {
+
+  const handleSelect = (e: React.ChangeEvent<{ value: string }>) => {
     setSortBy(e.target.value)
   }
 

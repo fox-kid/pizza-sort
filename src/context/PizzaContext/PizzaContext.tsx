@@ -16,41 +16,45 @@ export interface Pizza {
   ingredients: string[]
 }
 
-export type SortByType = 'name' | 'price' | 'size' | 'delivery_time'
+export type SortByType = 'name' | 'price' | 'size' | 'delivery_time' | string
 
 export type CtxValues = {
-  pizzaList: Pizza[] | undefined
+  pizzaList: Pizza[]
   sortBy: SortByType
   setSortBy: (sortBy: SortByType) => void
   swap: boolean
   setSwap: (swap: boolean) => void
-  sortedList: Pizza[] | undefined
+  pizza: Pizza | undefined
+  setPizza: (pizza: Pizza) => void
+  sortedList: Pizza[]
+  setSortedList: (sortedList: Pizza[]) => void
 }
 
 const PizzaContext = createContext<CtxValues>({
-  pizzaList: undefined,
+  pizzaList: [],
   sortBy: 'name',
   setSortBy: () => {},
   swap: false,
   setSwap: () => {},
-  sortedList: undefined,
+  pizza: undefined,
+  setPizza: () => {},
+  sortedList: [],
+  setSortedList: () => {},
 })
 
 const PizzaContextProvider = ({ children }: { children: ReactNode }) => {
-  const [pizzaList, setPizzaList] = useState<Pizza[]>()
+  const [pizzaList, setPizzaList] = useState<Pizza[]>(data.data)
   const [sortBy, setSortBy] = useState<SortByType>('name')
+  const [sortedList, setSortedList] = useState<Pizza[]>([])
   const [swap, setSwap] = useState<boolean>(false)
+  const [pizza, setPizza] = useState<Pizza>()
 
-  useEffect(() => {
-    setPizzaList(data.data)
-  }, [])
-
-  const sortedList = !swap
-    ? pizzaList?.sort((a, b) => (a[sortBy] > b[sortBy] ? 1 : -1))
-    : pizzaList?.sort((a, b) => (a[sortBy] < b[sortBy] ? 1 : -1))
-
-  // If it's sorted by size, the alphabet should be in reverse here
-  sortBy == 'size' && sortedList?.reverse()
+//   useEffect(() => {
+//     const sorted = swap
+//       ? pizzaList.sort((a: any, b: any) => (a[sortBy] < b[sortBy] ? 1 : -1))
+//       : pizzaList.sort((a: any, b: any) => (a[sortBy] > b[sortBy] ? 1 : -1))
+//     setSortedList(sorted)
+//   }, [sortBy, swap])
 
   return (
     <PizzaContext.Provider
@@ -60,7 +64,10 @@ const PizzaContextProvider = ({ children }: { children: ReactNode }) => {
         setSortBy: setSortBy,
         swap: swap,
         setSwap: setSwap,
+        pizza: pizza,
+        setPizza: setPizza,
         sortedList: sortedList,
+        setSortedList: setSortedList,
       }}
     >
       {children}
