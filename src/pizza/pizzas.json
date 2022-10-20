@@ -29,7 +29,7 @@
     },
     {
       "name": "Calzone",
-      "price": 26,
+      "price": 32,
       "size": "S",
       "delivery_time": 60,
       "ingredients": [
