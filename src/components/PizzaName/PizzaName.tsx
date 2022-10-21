@@ -1,4 +1,4 @@
-import { Pizza, usePizzaContext } from '../../context/PizzaContext'
+import { usePizzaContext } from '../../context/PizzaContext'
 
 import './styles.css'
 
