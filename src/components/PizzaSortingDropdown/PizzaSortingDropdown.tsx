@@ -3,11 +3,18 @@ import { usePizzaContext } from '../../context/PizzaContext'
 import './styles.css'
 
 const PizzaSortingDropdown = () => {
-  const { setSortBy, swap, setSwap } = usePizzaContext()
-
+  const { sortBy, setSortBy, swap, setSwap, updateSortedList } =
+    usePizzaContext()
 
   const handleSelect = (e: React.ChangeEvent<{ value: string }>) => {
-    setSortBy(e.target.value)
+    const sorter = e.target.value
+    setSortBy(sorter)
+    updateSortedList({ sorter })
+  }
+
+  const handleSwap = () => {
+    setSwap(!swap)
+    updateSortedList(sortBy)
   }
 
   return (
@@ -20,7 +27,10 @@ const PizzaSortingDropdown = () => {
           <option value='size'>Size</option>
           <option value='delivery_time'>Delivery time</option>
         </select>
-        <button className={`${swap ? 'btn swap reversed' : 'btn swap'} `} onClick={() => setSwap(!swap)} />
+        <button
+          className={`${swap ? 'btn swap reversed' : 'btn swap'} `}
+          onClick={() => handleSwap()}
+        />
       </div>
     </div>
   )
