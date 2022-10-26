@@ -1,19 +1,22 @@
-import { PizzaContextProvider } from './context/PizzaContext'
+import Picasso from '@toptal/picasso-provider'
+import { Page } from '@toptal/picasso'
 
-import PizzaName from './components/PizzaName'
-import PizzaSortingDropdown from './components/PizzaSortingDropdown'
-import PizzaIngredients from './components/PizzaIngredients'
-import './App.css'
+import { PizzaContextProvider } from './context/PizzaContext'
+import Content from './components/Content'
 
 function App() {
   return (
-    <PizzaContextProvider>
-      <main className="container">
-        <PizzaSortingDropdown />
-        <PizzaName />
-        <PizzaIngredients />
-      </main>
-    </PizzaContextProvider>
+    <Picasso>
+      <PizzaContextProvider>
+        <Page>
+          <Page.TopBar title='Pizza sorter' />
+          <Page.Content>
+            <Content />
+          </Page.Content>
+          <Page.Footer />
+        </Page>
+      </PizzaContextProvider>
+    </Picasso>
   )
 }
 

@@ -1,4 +1,10 @@
-import { createContext, ReactNode, useContext, useState } from 'react'
+import {
+  createContext,
+  ReactNode,
+  useContext,
+  useState,
+  useEffect,
+} from 'react'
 
 import data from '../../pizza/pizzas.json'
 
@@ -10,7 +16,7 @@ export interface Pizza {
   ingredients: string[]
 }
 
-export type SortByType = 'name' | 'price' | 'size' | 'delivery_time' | string
+export type SortByType = 'name' | 'price' | 'size' | 'delivery_time'
 
 export type CtxValues = {
   pizzaList: Pizza[]
@@ -20,7 +26,6 @@ export type CtxValues = {
   setSwap: (swap: boolean) => void
   sortedList: Pizza[]
   setSortedList: (sortedList: Pizza[]) => void
-  updateSortedList: (sorter: any) => void
 }
 
 const PizzaContext = createContext<CtxValues>({
@@ -31,7 +36,6 @@ const PizzaContext = createContext<CtxValues>({
   setSwap: () => {},
   sortedList: [],
   setSortedList: () => {},
-  updateSortedList: () => {},
 })
 
 const PizzaContextProvider = ({ children }: { children: ReactNode }) => {
@@ -40,13 +44,17 @@ const PizzaContextProvider = ({ children }: { children: ReactNode }) => {
   const [sortedList, setSortedList] = useState<Pizza[]>([])
   const [swap, setSwap] = useState<boolean>(false)
 
-  const updateSortedList = ({ sorter }: any) => {
-    const sorted = swap
-      ? pizzaList.sort((a: any, b: any) => (a[sorter] < b[sorter] ? 1 : -1))
-      : pizzaList.sort((a: any, b: any) => (a[sorter] > b[sorter] ? 1 : -1))
+  useEffect(() => {
+    const crt = [...pizzaList]
 
-    sorter !== 'size' ? setSortedList(sorted) : setSortedList(sorted.reverse())
-  }
+    const cmp = swap
+      ? (a: Pizza, b: Pizza) => (a[sortBy] < b[sortBy] ? 1 : -1)
+      : (a: Pizza, b: Pizza) => (a[sortBy] > b[sortBy] ? 1 : -1)
+
+    const sorted = crt.sort(cmp)
+
+    sortBy !== 'size' ? setSortedList(sorted) : setSortedList(sorted.reverse())
+  }, [sortBy, swap, pizzaList])
 
   return (
     <PizzaContext.Provider
@@ -58,7 +66,6 @@ const PizzaContextProvider = ({ children }: { children: ReactNode }) => {
         setSwap: setSwap,
         sortedList: sortedList,
         setSortedList: setSortedList,
-        updateSortedList: updateSortedList,
       }}
     >
       {children}

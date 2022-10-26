@@ -1,4 +1,7 @@
 .dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   -webkit-margin-after: 20px;
           margin-block-end: 20px;
 }
@@ -10,15 +13,6 @@
   display: flex;
   align-items: center;
 }
-.dropdown .preference select {
-  width: 300px;
-  height: 40px;
-  padding: 4px;
-  -webkit-margin-end: 16px;
-          margin-inline-end: 16px;
-  font-size: 18px;
-  text-transform: capitalize;
-}
 .dropdown .preference .btn {
   border: none;
   background-color: transparent;
@@ -28,6 +22,8 @@
   background-image: url(../../images/swap.png);
   width: 30px;
   height: 30px;
+  -webkit-margin-start: 10px;
+          margin-inline-start: 10px;
   background-size: cover;
   position: relative;
 }

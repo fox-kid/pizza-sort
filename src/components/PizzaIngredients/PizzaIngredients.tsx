@@ -1,3 +1,4 @@
+import { Container, Typography } from '@toptal/picasso'
 import { usePizzaContext } from '../../context/PizzaContext'
 
 import './styles.css'
@@ -7,7 +8,11 @@ const PizzaIngredients = () => {
 
   return (
     <div className='ingredients__wrapper'>
-      <h4>Ingredients:</h4>
+      <Container top='small' bottom='small'>
+        <Typography align='center' variant='heading' size='medium'>
+          Ingredients:
+        </Typography>
+      </Container>
       <div className='ingredients__images'>
         {sortedList
           ? sortedList[0]?.ingredients.map((src) => (
