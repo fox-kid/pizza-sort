@@ -1,6 +1,7 @@
 {
   "data": [
     {
+      "id": "1",
       "name": "Margherita",
       "price": 18,
       "size": "M",
@@ -14,6 +15,7 @@
       ]
     },
     {
+      "id": "2",
       "name": "Prosciutto",
       "price": 28,
       "size": "S",
@@ -28,6 +30,7 @@
       ]
     },
     {
+      "id": "3",
       "name": "Calzone",
       "price": 32,
       "size": "S",
@@ -43,6 +46,7 @@
       ]
     },
     {
+      "id": "4",
       "name": "Hawaiian",
       "price": 30,
       "size": "M",
@@ -56,6 +60,7 @@
       ]
     },
     {
+      "id": "5",
       "name": "Pepperoni",
       "price": 24,
       "size": "L",

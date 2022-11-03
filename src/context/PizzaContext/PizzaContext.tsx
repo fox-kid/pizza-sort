@@ -9,6 +9,7 @@ import {
 import data from '../../pizza/pizzas.json'
 
 export interface Pizza {
+  id: string
   name: string
   price: number
   size: string

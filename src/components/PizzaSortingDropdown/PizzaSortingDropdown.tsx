@@ -52,7 +52,7 @@ const PizzaSortingDropdown = () => {
         />
         <button
           className={`${swap ? 'btn swap reversed' : 'btn swap'} `}
-          onClick={() => handleSwap()}
+          onClick={handleSwap}
         />
       </div>
     </div>

@@ -1,17 +1,17 @@
 import Picasso from '@toptal/picasso-provider'
+
 import { Page } from '@toptal/picasso'
 
 import { PizzaContextProvider } from './context/PizzaContext'
-import Content from './components/Content'
+import RoutesComp from './RoutesComp'
 
 function App() {
   return (
     <Picasso>
       <PizzaContextProvider>
         <Page>
-          <Page.TopBar title='Pizza sorter' />
           <Page.Content>
-            <Content />
+            <RoutesComp />
           </Page.Content>
           <Page.Footer />
         </Page>
