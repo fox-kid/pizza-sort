@@ -1,10 +1,11 @@
 import { useParams } from 'react-router-dom'
 import { Container, Page, Typography } from '@toptal/picasso'
 import { usePizzaContext } from '../../context/PizzaContext'
+import { NavButton } from '../../styles/styles'
 
 const PizzaPage = () => {
   const { pizzaList } = usePizzaContext()
-  let { id } = useParams()
+  let { id } = useParams<any>()
 
   return (
     <Container>
@@ -43,6 +44,7 @@ const PizzaPage = () => {
             </Container>
           )}
         </Page.Article>
+        <NavButton href='/'>Home page</NavButton>
       </Page.Content>
     </Container>
   )

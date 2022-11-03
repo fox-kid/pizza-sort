@@ -1,5 +1,6 @@
 import { Container, Page, Typography } from '@toptal/picasso'
 import { usePizzaContext } from '../../context/PizzaContext'
+import { NavButton } from '../../styles/styles'
 
 const PizzaListPage = () => {
   const { pizzaList } = usePizzaContext()
@@ -34,6 +35,7 @@ const PizzaListPage = () => {
               ))
             : null}
         </Page.Article>
+        <NavButton href='/'>Home page</NavButton>
       </Page.Content>
     </Container>
   )
