@@ -3,7 +3,7 @@ import Picasso from '@toptal/picasso-provider'
 import { Page } from '@toptal/picasso'
 
 import { PizzaContextProvider } from './context/PizzaContext'
-import RoutesComp from './RoutesComp'
+import RoutesComponent from './RoutesComponent'
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <PizzaContextProvider>
         <Page>
           <Page.Content>
-            <RoutesComp />
+            <RoutesComponent />
           </Page.Content>
           <Page.Footer />
         </Page>
